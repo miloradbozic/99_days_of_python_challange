@@ -7,12 +7,12 @@ def decimal_to_binary(number):
     if number == 0:
         return "0"
 
-    exp = find_highest_exponent(number)
+    exp = __find_highest_exponent(number)
 
     res = ""
     while exp > 0:
         exp = exp - 1
-        if number / 2 ** exp >= 1:
+        if number_in_exp(number, exp):
             res += "1"
             number = number - 2 ** exp
         else:
@@ -21,11 +21,15 @@ def decimal_to_binary(number):
     return res
 
 
-def find_highest_exponent(number):
+def __find_highest_exponent(number):
     exp = 0
     while number >= 2 ** exp:
         exp += 1
     return exp
+
+
+def number_in_exp(number, exp):
+    return number - 2 ** exp >= 0   # same as: return number / 2 ** exp >= 1
 
 
 assert decimal_to_binary(9) == "1001"
