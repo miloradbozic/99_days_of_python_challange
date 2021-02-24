@@ -38,3 +38,4 @@ assert decimal_to_binary(2) == "10"
 assert decimal_to_binary(0) == "0"
 assert decimal_to_binary(3819) == "111011101011"
 assert decimal_to_binary(798340) == "11000010111010000100"
+
