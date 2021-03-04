@@ -6,11 +6,11 @@ calculate the earliest position in time
 
 def frog_jump(X, A):
     leaf_count = 0
-    leafs = [False] * X
-    print(leafs)
+    leaves = [False] * X
+    print(leaves)
     for i in range(len(A)):
-        if leafs[A[i]-1] == False:
-            leafs[A[i]-1] = True
+        if leaves[A[i]-1] == False:
+            leaves[A[i]-1] = True
             leaf_count+=1
             if leaf_count == X:
                 return i
