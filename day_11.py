@@ -19,9 +19,10 @@ def get_smallest_positive(A):
 
 # O(n) + O(m)
 def get_smallest_positive2(A):
-    values = [False] * 100000
+    values = [False] * 1000000
     for v in A:
-        values[v-1] = True
+        if v > 0:
+            values[v-1] = True
 
     for i in range(len(values)):
         if not values[i]:
@@ -30,3 +31,4 @@ def get_smallest_positive2(A):
 
 assert get_smallest_positive2([1, 3, 6, 4, 1, 2]) == 5
 assert get_smallest_positive2([-2, -1]) == 1
+assert get_smallest_positive2([-1000000, 1000000]) == 1
