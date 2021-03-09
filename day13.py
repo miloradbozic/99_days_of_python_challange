@@ -13,6 +13,7 @@ def get_prefix_sums(A):
 
     return sums
 
+
 # log(nm)
 def find_maximum(A,k, m):
     max_sum = 0
