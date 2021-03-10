@@ -3,13 +3,9 @@ GenomicRangeQuery - Find the minimal nucleotide from a range of sequence DNA.
 '''
 import cProfile
 
-
+# O(n*m)
 def solution(S, P, Q):
     char_dict = {"A": 1, "C": 2, "G": 3, "T":4 }
-    # value_S = []
-    # for c in S:
-    #     value_S.append(char_dict[c])
-
     V = [0] * len(P)
     for i in range(len(P)):
         start_index = P[i]
