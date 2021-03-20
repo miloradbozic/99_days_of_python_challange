@@ -8,6 +8,8 @@ def solution(A):
     for i in range(len(A)):
         if A[i] == 0:
             passing_cars_sum += prefix_sums[len(A)] - prefix_sums[i]
+            if passing_cars_sum > 1000000000:
+                return -1
 
     return passing_cars_sum
 
